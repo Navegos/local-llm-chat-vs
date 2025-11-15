@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+  <Include href="KnownImageIds.vsct"/>
+
+  <Commands package="guidLocalLLMChatPackage">
+    <Groups>
+      <Group guid="guidLocalLLMChatPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidLocalLLMChatPackageCmdSet" id="OpenChatCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidLocalLLMChatPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="ImageCatalogGuid" id="CommentGroup" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <Strings>
+          <ButtonText>Local LLM: Open Chat</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidLocalLLMChatPackageCmdSet" id="ClearConversationCommandId" priority="0x0101" type="Button">
+        <Parent guid="guidLocalLLMChatPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="ImageCatalogGuid" id="ClearWindowContent" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <Strings>
+          <ButtonText>Local LLM: Clear Conversation</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidLocalLLMChatPackageCmdSet" id="SendFileToChatCommandId" priority="0x0102" type="Button">
+        <Parent guid="guidLocalLLMChatPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="ImageCatalogGuid" id="SendToBack" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <Strings>
+          <ButtonText>Local LLM: Send File to Chat</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="guidLocalLLMChatPackageCmdSet" id="SendActiveFileToChatCommandId" priority="0x0103" type="Button">
+        <Parent guid="guidLocalLLMChatPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="ImageCatalogGuid" id="DocumentSource" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <Strings>
+          <ButtonText>Local LLM: Send Active File to Chat</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidLocalLLMChatPackage" value="{7D8E9F0A-1B2C-4D5E-8F9A-0B1C2D3E4F5A}" />
+
+    <GuidSymbol name="guidLocalLLMChatPackageCmdSet" value="{8E9F0A1B-2C3D-4E5F-9A0B-1C2D3E4F5A6B}">
+      <IDSymbol name="MyMenuGroup" value="0x1020" />
+      <IDSymbol name="OpenChatCommandId" value="0x0100" />
+      <IDSymbol name="ClearConversationCommandId" value="0x0101" />
+      <IDSymbol name="SendFileToChatCommandId" value="0x0102" />
+      <IDSymbol name="SendActiveFileToChatCommandId" value="0x0103" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
